@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Luxury Grade</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="icon" href="logo.jpg" type="img/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="heading">Luxury Grade</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="index.html#products">🛍️ Products</a></li>
+                    <li><a href="about.html">📖 About</a></li>
+                    <li><a href="contact.html">📞 Contact</a></li>
+                    <li><a href="login.html" class="box"><b>Sign up</b></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="checkout">
+        <div class="container">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" placeholder="Ex: Mr john doe" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" placeholder="Ex: 91XX XXX XXX" id="contact" name="contact" required>
+                </div>
+                <div class="form-group">
+                    <label for="pincode">Pincode:</label>
+                    <input type="text" placeholder="Ex: 5XXXX5" id="pincode" name="pincode" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" placeholder="Ex: Hyderabad" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <input type="text" placeholder="Ex: Telangana" id="state" name="state" required>
+                </div>
+                <div class="form-group">
+                    <label for="house-no">House No:</label>
+                    <input type="text" placeholder="240-55 1/3 Charminar" id="house-no" name="house-no" required>
+                </div>
+                <div class="form-group">
+                    <label for="area">Area/Road Name/Colony:</label>
+                    <input type="text" id="area" name="area" required>
+                </div>
+                <button type="submit" class="btn">Proceed to Payment</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>2025 Luxury Grade. All rights reserved.</p>
+            <p>Contact with us: <a href="mailto:luxurygradeofficial@gmail.com">SEND MAIL</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Handle form submission
+        document.getElementById('checkout-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                contact: document.getElementById('contact').value,
+                pincode: document.getElementById('pincode').value,
+                city: document.getElementById('city').value,
+                state: document.getElementById('state').value,
+                houseNo: document.getElementById('house-no').value,
+                area: document.getElementById('area').value,
+            };
+
+            // Save form data to localStorage
+            localStorage.setItem('checkoutData', JSON.stringify(formData));
+
+            // Redirect to payment page
+            window.location.href = 'payment.html';
+        });
+    </script>
+</body>
+</html>

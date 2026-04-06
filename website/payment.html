@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Luxury Grade</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="heading">Luxury Grade</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="index.html#products">🛍️ Products</a></li>
+                    <li><a href="about.html">📖 About</a></li>
+                    <li><a href="contact.html">📞 Contact</a></li>
+                    <li><a href="login.html" class="box"><b>Sign up</b></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="payment">
+        <div class="container">
+            <div class="payment-container">
+                <div class="payment-form">
+                    <h2><i class="fas fa-lock"></i> Secure Payment</h2>
+                    
+                    <div class="delivery-info">
+                        <h3>Delivery to:</h3>
+                        <div id="delivery-address"></div>
+                    </div>
+                    
+                    <form id="payment-form">
+                        <div class="form-group">
+                            <label for="card-name">Name on Card</label>
+                            <input type="text" id="card-name" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="card-number">Card Number</label>
+                            <div class="input-with-icon">
+                                <i class="far fa-credit-card"></i>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry-date">Expiry Date</label>
+                                <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <div class="input-with-icon">
+                                    <input type="text" id="cvv" placeholder="123" maxlength="4" required>
+                                    <i class="fas fa-question-circle" title="3 or 4 digit code on back of card"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn pay-btn">
+                            <i class="fas fa-lock"></i> Pay Now
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div id="order-items">
+                        <!-- Cart items will be displayed here -->
+                        <div class="order-item">
+                            <img src="https://via.placeholder.com/60" alt="Product">
+                            <div class="order-item-details">
+                                <h4>Sample Product</h4>
+                                <p class="price">₹999</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₹999</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Shipping</span>
+                            <span>FREE</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Tax</span>
+                            <span id="tax">₹180</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Total</span>
+                            <span id="total">₹1179</span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <p>We accept:</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p>Processing your payment...</p>
+    </div>
+    
+    <div class="payment-success" id="paymentSuccess">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h2>Payment Successful!</h2>
+            <p>Thank you for your purchase. Your order confirmation has been sent to your email.</p>
+            <button id="continueShopping">Continue Shopping</button>
+        </div>
+    </div>
+
+    <div class="notice-box">
+        <p><strong>NOTE:</strong> In case your account is debited and the website gets disconnected before payment receipt generation, kindly compulsory check your Payment Status using Payment Status option by providing your details. If you get message "Payment Details Not Found", candidate is requested to go for a fresh payment and the amount for the failure transaction will be refunded to their debited bank account in 5 working days.</p>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

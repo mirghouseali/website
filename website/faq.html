@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Luxury Grade</title>
+    <link rel="stylesheet" href="faq.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Luxury Grade</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html" class="active">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- FAQ Hero Section -->
+    <section class="faq-hero">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to common questions about our products and services</p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <main class="faq-content">
+        <div class="container">
+            <div class="faq-intro">
+                <p>Can't find what you're looking for? <a href="contact.html">Contact our team</a> for personalized assistance.</p>
+            </div>
+
+            <!-- FAQ Categories -->
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="all">All Questions</button>
+                <button class="category-btn" data-category="orders">Orders</button>
+                <button class="category-btn" data-category="shipping">Shipping</button>
+                <button class="category-btn" data-category="products">Products</button>
+                <button class="category-btn" data-category="returns">Returns</button>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="faq-accordion">
+                <!-- Order Questions -->
+                <div class="faq-item" data-category="orders">
+                    <button class="faq-question">
+                        <span>How do I place an order?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ordering is simple! Browse our collection, select your desired items, add them to your cart, and proceed to checkout. You'll need to provide shipping information and payment details to complete your purchase.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="orders">
+                    <button class="faq-question">
+                        <span>Can I modify or cancel my order?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Orders can be modified or canceled within 1 hour of placement. After this window, your order enters our processing system and cannot be changed. Contact us immediately if you need assistance.</p>
+                    </div>
+                </div>
+
+                <!-- Shipping Questions -->
+                <div class="faq-item" data-category="shipping">
+                    <button class="faq-question">
+                        <span>What shipping options do you offer?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer standard (3-5 business days), expedited (2-3 business days), and express (1-2 business days) shipping options. International shipping is also available with varying delivery times.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="shipping">
+                    <button class="faq-question">
+                        <span>Do you ship internationally?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we ship to most countries worldwide. International shipping rates and delivery times vary by destination. Additional customs fees may apply depending on your country's regulations.</p>
+                    </div>
+                </div>
+
+                <!-- Product Questions -->
+                <div class="faq-item" data-category="products">
+                    <button class="faq-question">
+                        <span>How do I care for leather accessories?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Use a quality leather conditioner every few months. Avoid prolonged exposure to water and direct sunlight. For stains, use a slightly damp cloth with mild soap. Always store in a cool, dry place.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="products">
+                    <button class="faq-question">
+                        <span>Are your products waterproof?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our leather products are water-resistant but not waterproof. We recommend treating them with a waterproofing spray for additional protection. Metal components may tarnish if exposed to moisture.</p>
+                    </div>
+                </div>
+
+                <!-- Return Questions -->
+                <div class="faq-item" data-category="returns">
+                    <button class="faq-question">
+                        <span>What is your return policy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept returns within 30 days of delivery for unused items in original condition with tags attached. Simply initiate a return through our Returns Center, and we'll provide a prepaid shipping label.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="returns">
+                    <button class="faq-question">
+                        <span>How long do refunds take to process?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Once we receive your return, refunds are processed within 3-5 business days. The time it takes for the refund to appear in your account depends on your payment method and financial institution.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Help Section -->
+            <div class="additional-help">
+                <h3>Still need help?</h3>
+                <p>Our customer service team is available Monday-Sunday, 2:00 PM to 11:30 PM EST.</p>
+                <div class="help-options">
+                    <a href="contact.html" class="help-option">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email Us</span>
+                    </a>
+                    <a href="tel:+91 9347039270" class="help-option">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Call Us</span>
+                    </a>
+                    <a href="#" class="help-option" id="live-chat">
+                        <i class="fas fa-comment-dots"></i>
+                        <span>Live Chat</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Luxury Grade</h4>
+                    <p>Premium accessories for the modern gentleman. Quality craftsmanship meets contemporary style.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#products">Collections</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="policies.html">Shipping Policy</a></li>
+                        <li><a href="return.html">Returns & Exchanges</a></li>
+                        <li><a href="guide.html">Size Guide</a></li>
+                        <li><a href="about.html">Care Instructions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/luxurygrade_official/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/login.php/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/login"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Luxury Grade. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

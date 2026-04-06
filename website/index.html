@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Luxury Grade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="logo.jpg" type="img/x-icon">
+    <script src='https://www.noupe.com/embed/019a2f332eb27a008d6ae2017c9b8dceb59b.js'></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ==================== */
+        /* Global Styles */
+        /* ==================== */
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-light: #f8f9fa;
+            --primary-accent: #d4af37;
+            --secondary-dark: #2a324b;
+            --secondary-light: #e0e3e8;
+            --text-dark: #333333;
+            --text-light: #777777;
+            --success: #4caf50;
+            --error: #e63946;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--primary-light);
+            padding-top: 0 !important;
+            /* Force override if needed */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ==================== */
+        /* Header Styles */
+        /* ==================== */
+        .main-header {
+            background-color: rgba(26, 26, 26, 0.95);
+            color: var(--primary-light);
+            padding: 1rem 0;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--primary-light);
+            margin-bottom: 0.2rem;
+        }
+
+        .logo p {
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-align: center;
+            color: var(--primary-accent);
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .main-nav li {
+            margin: 0 1rem;
+        }
+
+        .main-nav a {
+            color: var(--primary-light);
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .main-nav a:hover {
+            color: var(--primary-accent);
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-accent);
+            transition: var(--transition);
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        .btn-signup {
+            background-color: var(--primary-accent);
+            color: var(--primary-dark);
+            padding: 0.8rem 2rem;
+            /* Increased padding for larger size */
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            min-width: 120px;
+            /* Ensures minimum width */
+            text-align: center;
+            display: inline-block;
+            /* Better control over sizing */
+            font-size: 1rem;
+            /* Slightly larger font */
+            letter-spacing: 0.5px;
+            /* Improved typography */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+        }
+
+        .btn-signup:hover {
+            background-color: transparent;
+            color: var(--primary-accent);
+            border-color: var(--primary-accent);
+            transform: translateY(-2px);
+            /* Lift effect on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            /* Enhanced shadow on hover */
+        }
+
+        /* ==================== */
+        /* Hero Banner Styles */
+        /* ==================== */
+        .hero-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('banner.jpeg') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            color: var(--primary-light);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary-accent);
+            color: var(--primary-dark);
+            padding: 0.8rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--primary-accent);
+            border-color: var(--primary-accent);
+            transform: translateY(-3px);
+        }
+
+        #btn-primary {
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            transition: top 0.2s, left 0.2s;
+            z-index: 2000;
+        }
+
+
+        /* ==================== */
+        /* Products Section Styles */
+        /* ==================== */
+        .products-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-accent);
+            margin: 1rem auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--secondary-light);
+        }
+
+        .product-card h3 {
+            padding: 1rem 1rem 0.5rem;
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+        }
+
+        .price {
+            padding: 0 1rem;
+            color: var(--primary-accent);
+            font-weight: 600;
+        }
+
+        .price del {
+            color: var(--text-light);
+            margin-right: 0.5rem;
+        }
+
+        .btn-add-to-cart {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--secondary-dark);
+            color: white;
+            border: none;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .btn-add-to-cart:hover {
+            background-color: var(--primary-accent);
+            color: var(--primary-dark);
+        }
+
+        /* ==================== */
+        /* Contact Section Styles */
+        /* ==================== */
+        .contact-section {
+            padding: 3rem 0;
+            background-color: var(--secondary-dark);
+            color: var(--primary-light);
+            text-align: center;
+        }
+
+        .contact-section a {
+            color: var(--primary-accent);
+            transition: var(--transition);
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* ==================== */
+        /* Footer Styles */
+        /* ==================== */
+        .main-footer {
+            background-color: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-accent);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: var(--text-light);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary-accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .footer-bottom a {
+            color: var(--primary-accent);
+        }
+
+        /* ==================== */
+        /* Responsive Styles */
+        /* ==================== */
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main-nav li {
+                margin: 0.5rem 0;
+            }
+
+            .hero-content h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 450px) {
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Luxury Grade</h1>
+                <p>EST. 2010</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-signup">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero-banner">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Style That Defines You</h2>
+                <p>Discover our exquisite collection of premium men's accessories</p>
+                <a href="#products" id="btn-primary" class="btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid">
+
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="airpods.jpeg" alt="airpods">
+                    <div class="product-details">
+                        <h3>Earpods</h3>
+                        <p class="price"><del>₹1799</del> ₹999</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Wireless Bluetooth</p>
+                            <p><i class="fas fa-check-circle"></i> 20hrs battery life</p>
+                            <p><i class="fas fa-check-circle"></i> Noise cancellation</p>
+                        </div>
+                        <button onclick="addToCart('Earpods', 999, 'airpods.jpeg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="belt.jpeg" alt="belt">
+                    <div class="product-details">
+                        <h3>Leather Belt</h3>
+                        <p class="price"><del>₹999</del> ₹499</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Pure Leather</p>
+                            <p><i class="fas fa-check-circle"></i> Adjustable Size</p>
+                            <p><i class="fas fa-check-circle"></i> Classic Buckle Design</p>
+                        </div>
+                        <button onclick="addToCart('Leather Belt', 499, 'belt.jpeg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="bracelet.jpeg" alt="bracelet">
+                    <div class="product-details">
+                        <h3>Stylish Bracelet</h3>
+                        <p class="price"><del>₹799</del> ₹399</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Premium Build</p>
+                            <p><i class="fas fa-check-circle"></i> Adjustable Fit</p>
+                            <p><i class="fas fa-check-circle"></i> Unisex Design</p>
+                        </div>
+                        <button onclick="addToCart('Stylish Bracelet', 399, 'bracelet.jpeg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="brooches.webp" alt="brooch">
+                    <div class="product-details">
+                        <h3>Elegant Brooch</h3>
+                        <p class="price"><del>₹599</del> ₹299</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Premium Finish</p>
+                            <p><i class="fas fa-check-circle"></i> Lightweight & Durable</p>
+                            <p><i class="fas fa-check-circle"></i> Ideal for Parties & Weddings</p>
+                        </div>
+                        <button onclick="addToCart('Elegant Brooch', 299, 'brooches.webp')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="cap.jpeg" alt="cap">
+                    <div class="product-details">
+                        <h3>Classic Cap</h3>
+                        <p class="price"><del>₹499</del> ₹249</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Comfortable Fit</p>
+                            <p><i class="fas fa-check-circle"></i> Adjustable Strap</p>
+                            <p><i class="fas fa-check-circle"></i> Unisex Design</p>
+                        </div>
+                        <button onclick="addToCart('Classic Cap', 249, 'cap.jpeg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="card holder.jpeg" alt="card holder">
+                    <div class="product-details">
+                        <h3>Card Holder</h3>
+                        <p class="price"><del>₹699</del> ₹349</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Slim & Compact Design</p>
+                            <p><i class="fas fa-check-circle"></i> Holds up to 10 Cards</p>
+                            <p><i class="fas fa-check-circle"></i> Premium Leather Material</p>
+                        </div>
+                        <button onclick="addToCart('Card Holder', 349, 'card holder.jpeg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <img src="chain.jpg" alt="chain">
+                    <div class="product-details">
+                        <h3>Stylish Chain</h3>
+                        <p class="price"><del>₹899</del> ₹449</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Stainless Steel</p>
+                            <p><i class="fas fa-check-circle"></i> Rust-Free Finish</p>
+                            <p><i class="fas fa-check-circle"></i> Trendy & Lightweight</p>
+                        </div>
+                        <button onclick="addToCart('Stylish Chain', 449, 'chain.jpg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <img src="cufflinks.png" alt="Cufflinks">
+                    <div class="product-details">
+                        <h3>Elegant Cufflinks</h3>
+                        <p class="price"><del>₹299</del> ₹149</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Premium Design</p>
+                            <p><i class="fas fa-check-circle"></i> Scratch Resistant</p>
+                            <p><i class="fas fa-check-circle"></i> Perfect for Formal Wear</p>
+                        </div>
+                        <button onclick="addToCart('Elegant Cufflinks', 149, 'cufflinks.png')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <img src="earring.jpg" alt="Ear Ring">
+                    <div class="product-details">
+                        <h3>Elegant Ear Ring</h3>
+                        <p class="price"><del>₹499</del> ₹249</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Stylish & Lightweight</p>
+                            <p><i class="fas fa-check-circle"></i> Skin-Friendly Material</p>
+                            <p><i class="fas fa-check-circle"></i> Perfect for Party & Daily Wear</p>
+                        </div>
+                        <button onclick="addToCart('Elegant Ear Ring', 249, 'earring.jpg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <img src="facewash.png" alt="Face Wash">
+                    <div class="product-details">
+                        <h3>Refreshing Face Wash</h3>
+                        <p class="price"><del>₹349</del> ₹199</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Removes Dirt & Oil</p>
+                            <p><i class="fas fa-check-circle"></i> Suitable for All Skin Types</p>
+                            <p><i class="fas fa-check-circle"></i> Natural Ingredients</p>
+                        </div>
+                        <button onclick="addToCart('Refreshing Face Wash', 199, 'facewash.png')"
+                            class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <!-- Product 11 -->
+                <div class="product-card">
+                    <img src="hair tie.png" alt="Hair Tie">
+                    <div class="product-details">
+                        <h3>Hair Tie</h3>
+                        <p class="price"><del>₹199</del> ₹99</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Stretchable & Durable</p>
+                            <p><i class="fas fa-check-circle"></i> Gentle on Hair</p>
+                            <p><i class="fas fa-check-circle"></i> Everyday Use</p>
+                        </div>
+                        <button onclick="addToCart('Hair Tie', 99, 'hair tie.png')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 12 -->
+                <div class="product-card">
+                    <img src="handkerchief.png" alt="Handkerchief">
+                    <div class="product-details">
+                        <h3>Cotton Handkerchief</h3>
+                        <p class="price"><del>₹149</del> ₹79</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> 100% Pure Cotton</p>
+                            <p><i class="fas fa-check-circle"></i> Soft & Absorbent</p>
+                            <p><i class="fas fa-check-circle"></i> Gentle on Skin</p>
+                        </div>
+                        <button onclick="addToCart('Cotton Handkerchief', 79, 'handkerchief.png')"
+                            class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card">
+                    <img src="head phones.jpg" alt="Headphone">
+                    <div class="product-details">
+                        <h3>Wireless Headphone</h3>
+                        <p class="price"><del>₹1,299</del> ₹649</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Bluetooth 5.0 Connectivity</p>
+                            <p><i class="fas fa-check-circle"></i> Deep Bass & Clear Sound</p>
+                            <p><i class="fas fa-check-circle"></i> Up to 20 Hours Playback</p>
+                        </div>
+                        <button onclick="addToCart('Wireless Headphone', 649, 'head phones.jpg')"
+                            class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 14 -->
+                <div class="product-card">
+                    <img src="keychain.webp" alt="Key Chain">
+                    <div class="product-details">
+                        <h3>Stylish Key Chain</h3>
+                        <p class="price"><del>₹129</del> ₹69</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Premium Metal Finish</p>
+                            <p><i class="fas fa-check-circle"></i> Rust-Free Material</p>
+                            <p><i class="fas fa-check-circle"></i> Compact & Lightweight</p>
+                        </div>
+                        <button onclick="addToCart('Stylish Key Chain', 69, 'keychain.webp')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 15 -->
+                <div class="product-card">
+                    <img src="lighter.webp" alt="Lighter">
+                    <div class="product-details">
+                        <h3>Rechargeable Lighter</h3>
+                        <p class="price"><del>₹399</del> ₹199</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Windproof Flame</p>
+                            <p><i class="fas fa-check-circle"></i> USB Rechargeable</p>
+                            <p><i class="fas fa-check-circle"></i> Sleek & Stylish Design</p>
+                        </div>
+                        <button onclick="addToCart('Rechargeable Lighter', 199, 'lighter.webp')"
+                            class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 16 -->
+                <div class="product-card">
+                    <img src="officebag.jpeg" alt="Office Bag">
+                    <div class="product-details">
+                        <h3>Classic Office Bag</h3>
+                        <p class="price"><del>₹1,499</del> ₹799</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Spacious & Lightweight</p>
+                            <p><i class="fas fa-check-circle"></i> Premium Leather Finish</p>
+                            <p><i class="fas fa-check-circle"></i> Laptop & File Friendly</p>
+                        </div>
+                        <button onclick="addToCart('Classic Office Bag', 799, 'officebag.jpeg')"
+                            class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 17 -->
+                <div class="product-card">
+                    <img src="perfume.jpg" alt="Perfume">
+                    <div class="product-details">
+                        <h3>Luxury Perfume</h3>
+                        <p class="price"><del>₹799</del> ₹399</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Long-Lasting Fragrance</p>
+                            <p><i class="fas fa-check-circle"></i> Unisex – For All Genders</p>
+                            <p><i class="fas fa-check-circle"></i> Elegant Glass Bottle</p>
+                        </div>
+                        <button onclick="addToCart('Luxury Perfume', 399, 'perfume.jpg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 18 -->
+                <div class="product-card">
+                    <img src="powerbank.png" alt="Powerbank">
+                    <div class="product-details">
+                        <h3>Fast-Charge Powerbank</h3>
+                        <p class="price"><del>₹2,099</del> ₹999</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> 10,000mAh Capacity</p>
+                            <p><i class="fas fa-check-circle"></i> Dual USB Output</p>
+                            <p><i class="fas fa-check-circle"></i> Slim & Travel-Friendly</p>
+                        </div>
+                        <button onclick="addToCart('Fast-Charge Powerbank', 599, 'powerbank.png')"
+                            class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 19 -->
+                <div class="product-card">
+                    <img src="ring.avif" alt="Ring">
+                    <div class="product-details">
+                        <h3>Elegant Finger Ring</h3>
+                        <p class="price"><del>₹399</del> ₹199</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Premium Alloy Finish</p>
+                            <p><i class="fas fa-check-circle"></i> Adjustable Size</p>
+                            <p><i class="fas fa-check-circle"></i> Perfect for Gifting</p>
+                        </div>
+                        <button onclick="addToCart('Elegant Finger Ring', 199, 'ring.avif')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 20 -->
+                <div class="product-card">
+                    <img src="shoes.jpeg" alt="Shoes">
+                    <div class="product-details">
+                        <h3>Stylish Casual Shoes</h3>
+                        <p class="price"><del>₹1,299</del> ₹699</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Comfortable Fit</p>
+                            <p><i class="fas fa-check-circle"></i> Anti-Slip Sole</p>
+                            <p><i class="fas fa-check-circle"></i> Perfect for Daily Wear</p>
+                        </div>
+                        <button onclick="addToCart('Stylish Casual Shoes', 699, 'shoes.jpeg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 21 -->
+                <div class="product-card">
+                    <img src="suspender.png" alt="Suspender">
+                    <div class="product-details">
+                        <h3>Classic Suspender</h3>
+                        <p class="price"><del>₹499</del> ₹249</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Adjustable Length</p>
+                            <p><i class="fas fa-check-circle"></i> Strong Metal Clips</p>
+                            <p><i class="fas fa-check-circle"></i> Stylish & Functional</p>
+                        </div>
+                        <button onclick="addToCart('Classic Suspender', 249, 'suspender.png')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 22 -->
+                <div class="product-card">
+                    <img src="sunglasses.jpeg" alt="Sunglass">
+                    <div class="product-details">
+                        <h3>Sunglasses</h3>
+                        <p class="price"><del>₹799</del> ₹349</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> 100% UV Protection</p>
+                            <p><i class="fas fa-check-circle"></i> Stylish Unisex Design</p>
+                            <p><i class="fas fa-check-circle"></i> Lightweight & Durable</p>
+                        </div>
+                        <button onclick="addToCart('UV Protection Sunglass', 349, 'sunglasses.jpeg')"
+                            class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 23 -->
+                <div class="product-card">
+                    <img src="socks.webp" alt="Socks">
+                    <div class="product-details">
+                        <h3>Comfort Cotton Socks</h3>
+                        <p class="price"><del>₹299</del> ₹149</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Soft & Breathable Fabric</p>
+                            <p><i class="fas fa-check-circle"></i> Free Size – Fits All</p>
+                            <p><i class="fas fa-check-circle"></i> Pack of 3 Pairs</p>
+                        </div>
+                        <button onclick="addToCart('Comfort Cotton Socks', 149, 'socks.webp')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 24 -->
+                <div class="product-card">
+                    <img src="tie.jpg" alt="Tie">
+                    <div class="product-details">
+                        <h3>Formal Silk Tie</h3>
+                        <p class="price"><del>₹499</del> ₹249</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Smooth Silk Finish</p>
+                            <p><i class="fas fa-check-circle"></i> Perfect for Office & Events</p>
+                            <p><i class="fas fa-check-circle"></i> Easy to Knot & Maintain</p>
+                        </div>
+                        <button onclick="addToCart('Formal Silk Tie', 249, 'tie.jpg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 25 -->
+                <div class="product-card">
+                    <img src="trimmer.jpg" alt="Trimmer">
+                    <div class="product-details">
+                        <h3>Beard & Hair Trimmer</h3>
+                        <p class="price"><del>₹1,199</del> ₹599</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> USB Rechargeable</p>
+                            <p><i class="fas fa-check-circle"></i> Adjustable Length Settings</p>
+                            <p><i class="fas fa-check-circle"></i> Cordless Use up to 60 mins</p>
+                        </div>
+                        <button onclick="addToCart('Beard & Hair Trimmer', 599, 'trimmer.jpg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 26 -->
+                <div class="product-card">
+                    <img src="umbrella.jpeg" alt="Umbrella">
+                    <div class="product-details">
+                        <h3>Foldable Rain Umbrella</h3>
+                        <p class="price"><del>₹599</del> ₹299</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Windproof & Waterproof</p>
+                            <p><i class="fas fa-check-circle"></i> Compact & Lightweight</p>
+                            <p><i class="fas fa-check-circle"></i> Automatic Open/Close</p>
+                        </div>
+                        <button onclick="addToCart('Foldable Rain Umbrella', 299, 'umbrella.jpeg')"
+                            class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 27 -->
+                <div class="product-card">
+                    <img src="watch.jpeg" alt="Watch">
+                    <div class="product-details">
+                        <h3>Stylish Analog Watch</h3>
+                        <p class="price"><del>₹1,899</del> ₹949</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Classic Leather Strap</p>
+                            <p><i class="fas fa-check-circle"></i> Water Resistant</p>
+                            <p><i class="fas fa-check-circle"></i> Elegant Dial Design</p>
+                        </div>
+                        <button onclick="addToCart('Stylish Analog Watch', 949, 'watch.jpeg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 28 -->
+                <div class="product-card">
+                    <img src="wrist chain.jpg" alt="Wrist Chain">
+                    <div class="product-details">
+                        <h3>Men's Wrist Chain</h3>
+                        <p class="price"><del>₹699</del> ₹349</p>
+                        <div class="product-specs">
+                            <p><i class="fas fa-check-circle"></i> Premium Stainless Steel</p>
+                            <p><i class="fas fa-check-circle"></i> Rust-Free & Durable</p>
+                            <p><i class="fas fa-check-circle"></i> Sleek & Modern Look</p>
+                        </div>
+                        <button onclick="addToCart('Mens Wrist Chain', 349, 'wrist chain.jpg')" class="btn-add-to-cart">
+                            Add to Cart <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <p>Have any questions? Reach out to us at <a
+                    href="mailto:luxurygradeofficial@gmail.com">luxurygradeofficial@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/login.php/"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        </li>
+                        <li><a href="https://www.instagram.com/luxurygrade_official/"><i class="fab fa-instagram"></i>Instagram</a></li>
+                        <li><a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/login"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="guide.html">Guides</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                        <li><a href="return.html">Returns & Exchanges</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Luxury Grade. All rights reserved.</p>
+                <p>Contact: <a href="mailto:luxurygradeofficial@gmail.com">Email Us</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function addToCart(name, price, image) {
+            const item = { name, price, image };
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = 'cart.html'; // Redirect to cart page
+        }
+
+        const shopBtn = document.getElementById("btn-primary");
+
+        shopBtn.addEventListener("mouseenter", () => {
+            const maxX = window.innerWidth - shopBtn.offsetWidth;
+            const maxY = window.innerHeight - shopBtn.offsetHeight;
+
+            const newX = Math.floor(Math.random() * maxX);
+            const newY = Math.floor(Math.random() * maxY);
+
+            shopBtn.style.left = newX + "px";
+            shopBtn.style.top = newY + "px";
+        });
+
+        shopBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            alert("😅 Sorry, you can't click me!");
+        });
+
+    </script>
+</body>
+
+</html>

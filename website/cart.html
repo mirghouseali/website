@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cart - Luxury Grade</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="heading">Luxury Grade</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="index.html#products">🛍️ Products</a></li>
+                    <li><a href="about.html">📖 About</a></li>
+                    <li><a href="contact.html">📞 Contact</a></li>
+                    <li><a href="login.html" class="box"><b>Sign up</b></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section id="cart">
+    <div class="container">
+        <h2>YOUR CART</h2>
+        <div id="cart-items"></div>
+        <div id="total-price"></div>
+        <div class="cart-actions">
+            <button onclick="clearCart()">Clear Cart</button>
+            <button id="buy-now-button" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+    </div>
+</section>
+
+    <script src="cart.js"></script>
+</body>
+</html>

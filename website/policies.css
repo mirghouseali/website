@@ -1,0 +1,529 @@
+/* Base Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+    --border-radius: 4px;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-align: center;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Header Styles */
+.policies-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x600');
+    background-size: cover;
+    background-position: center;
+}
+
+.policies-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.policies-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+    background-color: var(--light-color);
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.breadcrumb ul {
+    display: flex;
+    list-style: none;
+}
+
+.breadcrumb li {
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb li:after {
+    content: '/';
+    margin-left: 10px;
+    color: var(--text-light);
+}
+
+.breadcrumb li:last-child:after {
+    content: '';
+}
+
+.breadcrumb li span {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Main Content Layout */
+.policies-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.policies-sidebar {
+    flex: 0 0 250px;
+}
+
+.policies-content {
+    flex: 1;
+}
+
+/* Sidebar Styles */
+.policies-sidebar h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-color);
+}
+
+.policies-sidebar ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.policies-sidebar li {
+    margin-bottom: 10px;
+}
+
+.policies-sidebar a {
+    display: block;
+    padding: 8px 10px;
+    border-radius: var(--border-radius);
+}
+
+.policies-sidebar a:hover {
+    background-color: var(--light-color);
+    padding-left: 15px;
+}
+
+.sidebar-help {
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-top: 30px;
+}
+
+.sidebar-help h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.sidebar-help p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+/* Policy Section Styles */
+.policy-section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.policy-section:last-child {
+    border-bottom: none;
+}
+
+.policy-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.policy-section h2 i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+/* Policy Card Styles */
+.policy-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.policy-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.policy-card p {
+    margin-bottom: 15px;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Policy List Styles */
+.policy-list {
+    list-style-position: inside;
+    margin: 15px 0;
+}
+
+.policy-list li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+.policy-list strong {
+    color: var(--primary-color);
+}
+
+/* Policy Steps (Numbered List) */
+.policy-steps {
+    list-style-type: none;
+    counter-reset: step-counter;
+    margin: 15px 0;
+}
+
+.policy-steps li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.policy-steps li:before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--accent-color);
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Policy Table Styles */
+.policy-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 0.95rem;
+}
+
+.policy-table th, .policy-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.policy-table th {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.policy-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Payment Methods Grid */
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+}
+
+.payment-method i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* CTA Section */
+.policies-cta {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.policies-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.policies-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Footer Styles */
+.policies-footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 50px 0 0;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ecf0f1;
+    transition: var(--transition);
+}
+
+.footer-column a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.newsletter-form button {
+    padding: 0 15px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+    background-color: #c0392b;
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: var(--text-light);
+}
+
+.legal-links a:hover {
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .policies-container {
+        flex-direction: column;
+    }
+    
+    .policies-sidebar {
+        flex: 1;
+        margin-bottom: 30px;
+    }
+    
+    .payment-methods {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .policies-header h1 {
+        font-size: 2rem;
+    }
+    
+    .policies-header p {
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .policy-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .policies-header {
+        padding: 40px 0;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .legal-links {
+        justify-content: center;
+    }
+    
+    .payment-methods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,228 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Light gradient background */
+    color: #333; /* Dark text for better contrast */
+}
+
+header {
+    background-color: rgba(26, 26, 26, 0.95);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #9D0B28; /* Darker red border */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 50px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f61; /* Coral color on hover */
+}
+
+.box {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #008cff;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    background-color: #008cff;
+    color: #ffffff;
+    border-color: #005bb5;
+    box-shadow: 0 0 10px #008cff, 0 0 20px #008cff, 0 0 30px #008cff;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #008cff; }
+    50% { box-shadow: 0 0 20px #008cff; }
+    100% { box-shadow: 0 0 5px #008cff; }
+}
+
+.box:hover {
+    animation: glow 1.5s infinite;
+}
+
+#cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center; /* Changed from flex-start to center */
+    align-items: center; /* Added to vertically center items if needed */
+    padding: 1rem;
+    margin: 0 auto; /* Center the container itself */
+    max-width: 1200px; /* Optional: Set a max width for better layout control */
+}
+
+.cart-item {
+    flex: 0 0 calc(25% - 1rem); /* Changed from flex: 1 1 to flex: 0 0 for more control */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 200px;
+    margin: 0.5rem; /* Added margin for better spacing */
+}
+
+.cart-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item img {
+    width: 80px; /* Smaller image width */
+    height: 80px; /* Smaller image height */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item h3 {
+    font-size: 1rem; /* Smaller heading size */
+    margin: 0.5rem 0;
+}
+
+.cart-item p {
+    font-size: 0.9rem; /* Smaller text size */
+    margin: 0.5rem 0;
+}
+
+.cart-item button {
+    background-color: #ff0000; /* light red color */
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem; /* Smaller padding */
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.8rem; /* Smaller font size */
+    transition: background 0.3s;
+}
+
+.cart-item button:hover {
+    background-color: #DC143C; /* Darker red on hover */
+}
+
+@media (max-width: 768px) {
+    .cart-item {
+        flex: 0 0 calc(50% - 1rem); /* 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-item {
+        flex: 0 0 100%; /* 1 item per row */
+        max-width: 300px; /* Slightly larger on mobile */
+    }
+}
+
+#total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.cart-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.cart-actions button {
+    background-color: #ff0000; /* red color */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+    width: 200px;
+    text-align: center;
+}
+
+.cart-actions button:hover {
+    background-color: #DC143C; /* darker red on hover */
+}
+
+#buy-now-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0; /* Add vertical spacing between nav items */
+    }
+    
+    .box {
+        padding: 8px 16px; /* Slightly smaller padding on mobile */
+        font-size: 0.9rem; /* Slightly smaller font */
+    }
+    
+    header h1 {
+        font-size: 1.8rem; /* Smaller logo text on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 100%; /* Full width buttons on smallest screens */
+        text-align: center;
+        margin: 0.25rem 0; /* Add spacing between stacked buttons */
+    }
+    
+    .cart-item {
+        width: 90%; /* Wider cards on mobile */
+        max-width: none; /* Remove max-width restriction */
+    }
+}
+
